@@ -4,31 +4,47 @@
 
 ## Summary
 
-Follow the Money is designed to collect as little information about you as possible. In this version of the app, every piece of data you create lives only on your device. Nothing is uploaded, shared, or sold.
+Follow the Money is designed to collect as little information about you as possible. By default, every piece of data you create lives only on your device. If you opt into cloud sync, a small set of bill metadata is sent to Apple's iCloud — never your photos, name, email, or location.
 
-## What we collect
+## Data stored on your device
 
-- **Bills you log:** serial number, denomination, series year, ZIP code, optional note, optional photo. All stored on your device.
+- **Bills you log:** serial number, denomination, series year, ZIP code, optional note, optional photo.
 - **Notification permission status,** if you choose to enable notifications.
 - **Camera permission status,** if you choose to take photos in the app.
 
-## What we don't collect
+## Data uploaded to Apple's iCloud (only if you opt in)
 
-We do not collect your name, email, phone number, address, GPS location, contacts, or any other personal information. We do not use third-party analytics or advertising frameworks.
+When you turn on cloud sync, the following is uploaded to a public CloudKit database hosted by Apple:
 
-## How your data is used
+- The bill's serial number, denomination, and series year
+- The ZIP code you entered
+- The date and time you logged it
+- A random anonymous identifier — never your name, email, or Apple ID
 
-Logged bills are stored locally to power the My Bills tab, the Map tab, and any statistics shown in About. Photos remain in the app's private storage and are never transmitted.
+This is what powers the cross-user matching feature: when someone else logs the same physical bill, the app can match it to yours and let you know.
+
+## What we never upload
+
+- Your photos
+- Your notes
+- Your GPS location
+- Your contacts
+- Your name, email, or any other personal identifier
+
+## How matched data is used
+
+When another user logs a bill that matches one of yours, Apple's CloudKit sends a silent push to your phone. The app turns that into a notification. Only the bill metadata, not the other user's identity, is shared with you.
 
 ## Sharing your data
 
-We do not share your data with anyone, because we do not collect it. If a future version adds a cloud-sync feature, the privacy policy will be updated and your explicit consent will be required before any data leaves your device.
+We do not share your data with third parties. The cloud-sync data is stored in Apple's CloudKit infrastructure under our app's public database, accessible only to other users of this app for the purpose of bill matching.
 
 ## Your choices
 
-- You can delete any bill at any time from the My Bills tab.
+- You can turn cloud sync on or off at any time in About → Cloud sync.
+- You can delete any bill at any time from the My Bills tab — that removes it from CloudKit too.
 - You can revoke camera or notification permission at any time in iOS Settings.
-- Deleting the app removes all locally stored data.
+- Deleting the app removes all locally stored data; you can also remove all your CloudKit data from About → Cloud sync.
 
 ## Children
 
@@ -40,17 +56,4 @@ If we materially change this policy we will update the "Last updated" date and n
 
 ## Contact
 
-Questions about this policy? Reach out at the contact address listed on our App Store page.
-
----
-
-## Hosting instructions (for the developer)
-
-The App Store requires this policy to be hosted at a public URL. Free options:
-
-1. **GitHub Pages** — Create a public repo with this file as `index.md`, enable Pages in settings
-2. **Notion** — Paste this into a public Notion page, copy the share URL
-3. **Carrd** — Free single-page site builder
-4. **Your own domain** — Drop this on any web host
-
-Once hosted, paste the URL into App Store Connect under App Information → Privacy Policy URL.
+Questions about this policy? Reach out at [mattagreen@gmail.com](mailto:mattagreen@gmail.com) or via our [Support page](https://mattagreen1.github.io/FollowTheMoney/support).
