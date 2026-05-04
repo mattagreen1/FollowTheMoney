@@ -25,7 +25,7 @@ When you write in, including the following helps me help you faster:
 
 ## Common questions
 
-Most "is this normal?" questions are answered on the [Frequently Asked Questions page](./faq).
+Most "is this normal?" questions are answered in the FAQ tab inside the app (tap the question-mark icon at the bottom of the screen). If yours isn't covered there, drop me an email.
 
 ## Privacy
 
