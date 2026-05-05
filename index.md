@@ -4,47 +4,55 @@
 
 ## Summary
 
-Follow the Money is designed to collect as little information about you as possible. By default, every piece of data you create lives only on your device. If you opt into cloud sync, a small set of bill metadata is sent to Apple's iCloud — never your photos, name, email, or location.
+Follow the Money is a community currency-tracking app. To make cross-user tracking work, the app shares the metadata of each bill you log with other users via Apple's iCloud. **This sharing is intrinsic to how the app works — it isn't optional.** We collect as little information as possible and never share your photos, personal information, or location.
 
-## Data stored on your device
+## What we share with other users
 
-- **Bills you log:** serial number, denomination, series year, ZIP code, optional note, optional photo.
-- **Notification permission status,** if you choose to enable notifications.
-- **Camera permission status,** if you choose to take photos in the app.
-
-## Data uploaded to Apple's iCloud (only if you opt in)
-
-When you turn on cloud sync, the following is uploaded to a public CloudKit database hosted by Apple:
+When you log a bill, the following is uploaded to a public CloudKit database hosted by Apple:
 
 - The bill's serial number, denomination, and series year
 - The ZIP code you entered
+- Latitude and longitude of the place you picked
 - The date and time you logged it
+- Your chosen display name (random by default — for example, "Curious Otter 47")
 - A random anonymous identifier — never your name, email, or Apple ID
 
-This is what powers the cross-user matching feature: when someone else logs the same physical bill, the app can match it to yours and let you know.
+This is what powers the cross-user matching and Analytics features.
 
-## What we never upload
+## What stays on your device
 
 - Your photos
 - Your notes
-- Your GPS location
+- Your specific street address
+- Your name
+- Your email
 - Your contacts
-- Your name, email, or any other personal identifier
+- Your GPS location
 
-## How matched data is used
+None of these ever leave your phone.
 
-When another user logs a bill that matches one of yours, Apple's CloudKit sends a silent push to your phone. The app turns that into a notification. Only the bill metadata, not the other user's identity, is shared with you.
+## How shared data is used
+
+Your uploaded bill metadata is queryable by other users of this app for two reasons:
+
+1. To send you a notification when someone else logs a bill you've also logged
+2. To power the Analytics tab (live counts, leaderboards, oldest bill, longest journey)
+
+Your shared data is not used for advertising. We do not sell it.
 
 ## Sharing your data
 
-We do not share your data with third parties. The cloud-sync data is stored in Apple's CloudKit infrastructure under our app's public database, accessible only to other users of this app for the purpose of bill matching.
+We do not share your data with third parties. The data lives in Apple's CloudKit infrastructure under our app's public database, accessible only to other users of this app for the purposes described above.
 
 ## Your choices
 
-- You can turn cloud sync on or off at any time in About → Cloud sync.
-- You can delete any bill at any time from the My Bills tab — that removes it from CloudKit too.
-- You can revoke camera or notification permission at any time in iOS Settings.
-- Deleting the app removes all locally stored data; you can also remove all your CloudKit data from About → Cloud sync.
+Sharing is a core feature of the app, so it can't be turned off. But you can:
+
+- Choose your display name (default is randomly generated, anonymous, and you can shuffle or edit it any time in About → Sharing)
+- Decide which bills to log — you have to actively log a bill for it to be shared
+- Delete any bill at any time from the My Bills tab — that also removes it from CloudKit
+- Revoke camera or notification permission at any time in iOS Settings
+- Stop using the app — uninstalling removes all locally stored data, and we'll delete the cloud-side records associated with your anonymous ID upon request
 
 ## Children
 
@@ -56,4 +64,4 @@ If we materially change this policy we will update the "Last updated" date and n
 
 ## Contact
 
-Questions about this policy? Reach out at [mattagreen@gmail.com](mailto:mattagreen@gmail.com) or via our [Support page](https://mattagreen1.github.io/FollowTheMoney/support).
+Questions about this policy, or want your CloudKit-side data removed? Reach out at [mattagreen@gmail.com](mailto:mattagreen@gmail.com) or via our [Support page](https://mattagreen1.github.io/FollowTheMoney/support).
