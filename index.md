@@ -75,4 +75,4 @@ If we materially change this policy we will update the "Last updated" date and n
 
 ## Contact
 
-Questions, concerns, or want your data deleted? Reach out at [mattagreen@gmail.com](mailto:mattagreen@gmail.com) or via our [Support page](https://mattagreen1.github.io/FollowTheMoney/support).
+Questions, concerns, or want your data deleted? Reach out at [followthemoney.support@gmail.com](mailto:followthemoney.support@gmail.com) or via our [Support page](https://mattagreen1.github.io/FollowTheMoney/support).
