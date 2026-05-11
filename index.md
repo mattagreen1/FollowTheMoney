@@ -25,6 +25,15 @@ When you log a bill:
 - **Optional note** you typed (kept private — see below)
 - **Optional photo** you took (kept private — see below)
 
+When you use the social features:
+
+- **Follow relationships** — which users you follow and who follows you (visible to other users on profile pages)
+- **Chase list serial numbers** — the bills you've added to your wishlist (used to notify you when one is logged; the serials themselves are stored alongside your account)
+- **Direct messages** — the text content of messages you send to other users, plus the timestamp and conversation participants. Messages are private between the two users in the conversation.
+- **Profile privacy preference** — whether your profile is set to public or private
+- **Block list** — uids you've blocked. Visible only to you.
+- **Reports you submit** — visible only to you and our moderation team.
+
 ## What we never collect
 
 - Your real name, mailing address, phone number, or contacts
@@ -45,9 +54,9 @@ User accounts and bill data are stored in **Google Firebase** (Firebase Authenti
 
 ## Who sees what
 
-- **Other users of the app** can see: bill metadata you log (denomination, serial, year, ZIP, latitude/longitude, date), and your username and display name. This is what powers the cross-user matching and Analytics features.
-- **You alone** see: your email, your photos, your notes, your specific street-level address.
-- **We (the developer)** can technically access all data stored in Firebase to operate and debug the app. We do not sell, share, or use it for advertising.
+- **Other users of the app** can see: bill metadata you log (denomination, serial, year, ZIP, latitude/longitude, date), your username and display name (unless your profile is set to private — in which case bills you log are attributed to "Anonymous"), your followers/following counts, and direct messages you send to them.
+- **You alone** see: your email, your photos, your notes, your specific street-level address, your chase list, your block list, and reports you submit.
+- **We (the developer)** can technically access all data stored in Firebase to operate the app, investigate moderation reports, and debug issues. We do not sell, share, or use any data for advertising.
 
 ## Sharing your data
 
@@ -59,11 +68,42 @@ Sharing is a core feature of the app, so it can't be turned off. But you can:
 
 - Choose your username (must be unique; can't be changed once set)
 - Edit your display name any time in About → Sharing
+- Set your profile to private (About → Account → "Private profile") to hide your bills' attribution and remove yourself from user search
 - Decide which bills to log — you have to actively log a bill for it to be shared
 - Delete any bill at any time from the My Bills tab — that removes it from Firebase
+- Block any user (from their profile or the conversation menu) to prevent them from messaging you
+- Report any user or message that violates our rules
 - Sign out at any time from About → Sign out
 - Revoke camera or notification permission at any time in iOS Settings
 - Request account deletion (which removes all your data) by emailing us — see Contact below
+
+## Messaging
+
+Direct messages are stored on Firebase and visible to:
+- The two users participating in the conversation
+- The app developer (Matthew Green) only when investigating a moderation report
+
+We don't read messages otherwise. We don't use messages for advertising or analytics. Don't share sensitive personal information (passwords, financial details, government ID numbers) over direct messages. The app warns recipients when an incoming message contains an email address or phone number, since those are common scam vectors.
+
+## Stamp orders
+
+The app offers an optional custom rubber stamp for purchase. When you tap "Order yours" the app opens **Stripe's hosted checkout page** in your browser. The Follow the Money app itself never collects, sees, or stores your payment information.
+
+What Stripe collects from you at checkout:
+- Your name
+- Your email address
+- Your shipping address
+- Your payment card details (handled and stored only by Stripe per their PCI-compliant infrastructure)
+- The username you'd like engraved on the stamp (entered as a custom field on the checkout page)
+
+What we (the developer) receive after a successful order:
+- Your name, email, and shipping address — used solely to ship the stamp to you
+- The username you provided — used solely to personalize the engraving
+- The amount paid and the order ID
+
+We do not receive or store your payment card number, CVC, or expiration date. Stripe processes the charge on our behalf; their handling of your data is governed by [Stripe's Privacy Policy](https://stripe.com/privacy). Your shipping address and email are kept only as long as needed to fulfill your order, after which they're retained in Stripe's records for the standard period required by tax and accounting regulations.
+
+We don't use stamp-order data for marketing or share it with anyone else.
 
 ## Children
 
