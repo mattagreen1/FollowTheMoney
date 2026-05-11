@@ -11,7 +11,7 @@ Need help with the app, found a bug, or just want to share feedback? You're in t
 
 The fastest way to reach me is by email:
 
-**[mattagreen@gmail.com](mailto:mattagreen@gmail.com?subject=Follow%20the%20Money%20support)**
+**[followthemoney.support@gmail.com](mailto:followthemoney.support@gmail.com?subject=Follow%20the%20Money%20support)**
 
 I'm a one-person operation, so please be patient — I aim to reply within a couple of days.
 
