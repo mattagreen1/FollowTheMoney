@@ -4,7 +4,7 @@
 
 ## Summary
 
-Follow the Money is a community currency-tracking app. To make cross-user tracking work, the app shares the metadata of each bill you log with other users via Google's Firebase platform. **This sharing is intrinsic to how the app works — it isn't optional.** We collect only what we need to power the app's features and never share your photos, address, or personal information beyond what's described below.
+Follow the Money is a community currency-tracking app. To make cross-user tracking work, the app shares the metadata of each bill you log — including the location you tag it with and any note you add — with other users via Google's Firebase platform. **This sharing is intrinsic to how the app works — it isn't optional.** We collect only what we need to power the app's features. Your photos and your personal contact details (like your email) are never published beyond what's described below.
 
 ## What we collect
 
@@ -20,10 +20,10 @@ To create and manage your account:
 When you log a bill:
 
 - **Bill identifiers** — denomination, serial number, series year
-- **Location** — the ZIP code, latitude, and longitude of the place you picked
+- **Location** — the name, ZIP code, latitude, and longitude of the place you picked. Uploaded with the bill and visible to other users on its public journey.
 - **Date and time** the bill was logged
-- **Optional note** you typed (kept private — see below)
-- **Optional photo** you took (kept private — see below)
+- **Optional note** you typed — uploaded with the bill and visible to other users (see "Who sees what" below)
+- **Optional photo** you took (stays on your device — see below)
 
 When you use the social features:
 
@@ -44,9 +44,10 @@ When you use the social features:
 
 Some data lives only on your phone and never leaves it:
 
-- The photos you take of bills
-- The optional notes you add to a bill
-- Your specific street address (only the ZIP and the picked place's coordinates are shared, not the unit number / building name in your friendly display)
+- The photos you take of bills (only the photo's filename is stored with the bill — never the image itself)
+- Your saved and last-used places (a convenience list kept on your device)
+
+**Heads up:** the note you add to a bill and the place you tag it with — including that place's name, ZIP, latitude, and longitude — are uploaded with the bill and are publicly visible on the bill's journey. Don't tag bills at sensitive locations like your home, and don't put private information in notes.
 
 ## Where your data is stored
 
@@ -54,8 +55,8 @@ User accounts and bill data are stored in **Google Firebase** (Firebase Authenti
 
 ## Who sees what
 
-- **Other users of the app** can see: bill metadata you log (denomination, serial, year, ZIP, latitude/longitude, date), your username and display name (unless your profile is set to private — in which case bills you log are attributed to "Anonymous"), your followers/following counts, and direct messages you send to them.
-- **You alone** see: your email, your photos, your notes, your specific street-level address, your chase list, your block list, and reports you submit.
+- **Other users of the app** can see: bill metadata you log (denomination, serial, year, the tagged place's name, ZIP, latitude/longitude, date), any note you add to a bill, your username and display name (unless your profile is set to private — in which case bills you log are attributed to "Anonymous"), your followers/following counts, and direct messages you send to them.
+- **You alone** see: your email, your photos, your chase list, your block list, and reports you submit.
 - **We (the developer)** can technically access all data stored in Firebase to operate the app, investigate moderation reports, and debug issues. We do not sell, share, or use any data for advertising.
 
 ## Sharing your data
