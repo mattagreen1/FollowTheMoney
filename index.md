@@ -1,10 +1,16 @@
 # Follow the Money — Privacy Policy
 
-**Last updated:** May 2026
+**Last updated:** June 2026
 
 ## Summary
 
-Follow the Money is a community currency-tracking app. To make cross-user tracking work, the app shares the metadata of each bill you log — including the location you tag it with and any note you add — with other users via Google's Firebase platform. **This sharing is intrinsic to how the app works — it isn't optional.** We collect only what we need to power the app's features. Your photos and your personal contact details (like your email) are never published beyond what's described below.
+This policy covers two apps from the same developer that share one account and one backend: **Follow the Money** (the community bill tracker) and **Hexpansion** (a location-based territory game). Most of this policy describes the bill tracker; a dedicated section near the end, **"Hexpansion,"** describes the extra data Hexpansion collects (most importantly your device location and in-game chat messages).
+
+**One family of apps.** Follow the Money and Hexpansion are part of the same family of apps — made by the same developer and sharing a single account and one backend. Because they're built to work together, this Privacy Policy (and our Terms of Use) applies equally to both, and to any other apps we may add to this family in the future. In short: anything that applies to one applies to all, and the account you create works across all of them.
+
+Your use of both apps is also governed by our **Terms of Use** (https://followthemoney.money/terms), which include an acceptable-use policy with **zero tolerance for objectionable content and abusive behavior**, and explain the in-app tools to report and block other users.
+
+Follow the Money is a community currency-tracking app. To make cross-user tracking work, the app shares the details of each bill you log — including the place you tag it with and any note you add — with other users via Google's Firebase platform. **This sharing is intrinsic to how the app works — it isn't optional.** We collect only what we need to power the app's features. Your bill photo and your account identity (real name, email) are not published. See below for exactly what other users can and can't see.
 
 ## What we collect
 
@@ -20,10 +26,12 @@ To create and manage your account:
 When you log a bill:
 
 - **Bill identifiers** — denomination, serial number, series year
-- **Location** — the name, ZIP code, latitude, and longitude of the place you picked. Uploaded with the bill and visible to other users on its public journey.
+- **Location** — the place you tag the bill with, including its name (e.g. a street address or business name), its ZIP code, and its latitude and longitude
 - **Date and time** the bill was logged
-- **Optional note** you typed — uploaded with the bill and visible to other users (see "Who sees what" below)
-- **Optional photo** you took (stays on your device — see below)
+- **Optional note** you typed
+- **Optional photo** you took (only the photo's filename is uploaded; the photo itself stays on your device — see below)
+
+Everything in a bill's record except the photo is uploaded and is visible to other users on that bill's public journey (see "Who sees what"). Because of that, avoid tagging bills at sensitive precise locations such as your home, and don't put anything private in a note.
 
 When you use the social features:
 
@@ -37,17 +45,17 @@ When you use the social features:
 ## What we never collect
 
 - Your real name, mailing address, phone number, or contacts
-- Your GPS location automatically — you choose what address to enter
+- **In the bill tracker:** your GPS location is not read automatically — you choose what address to enter for each bill. (Hexpansion is different: it does use your device location while you play — see the Hexpansion section below.)
 - Any data from third-party advertising or analytics SDKs (we don't use any)
 
 ## What stays on your device
 
 Some data lives only on your phone and never leaves it:
 
-- The photos you take of bills (only the photo's filename is stored with the bill — never the image itself)
-- Your saved and last-used places (a convenience list kept on your device)
+- The photos you take of bills (only the filename is uploaded with the bill; the image itself never leaves your phone)
+- Your recently used and starred locations, which the app remembers locally to pre-fill the log form — this saved list is not uploaded
 
-**Heads up:** the note you add to a bill and the place you tag it with — including that place's name, ZIP, latitude, and longitude — are uploaded with the bill and are publicly visible on the bill's journey. Don't tag bills at sensitive locations like your home, and don't put private information in notes.
+Note: the location and the note you attach to a bill you log are **not** kept private — they are uploaded with that bill and are visible to other users. See "Who sees what" below.
 
 ## Where your data is stored
 
@@ -55,8 +63,8 @@ User accounts and bill data are stored in **Google Firebase** (Firebase Authenti
 
 ## Who sees what
 
-- **Other users of the app** can see: bill metadata you log (denomination, serial, year, the tagged place's name, ZIP, latitude/longitude, date), any note you add to a bill, your username and display name (unless your profile is set to private — in which case bills you log are attributed to "Anonymous"), your followers/following counts, and direct messages you send to them.
-- **You alone** see: your email, your photos, your chase list, your block list, and reports you submit.
+- **Other users of the app** can see everything in a bill's record you log: denomination, serial, year, the place you tagged it with (its name, ZIP, and latitude/longitude), the date, and any note you added. They also see your username and display name (unless your profile is set to private — in which case bills you log are attributed to "Anonymous"), your followers/following counts, and direct messages you send to them.
+- **You alone** see: your email, your real name, your bill photos, your chase list, your block list, and reports you submit.
 - **We (the developer)** can technically access all data stored in Firebase to operate the app, investigate moderation reports, and debug issues. We do not sell, share, or use any data for advertising.
 
 ## Sharing your data
@@ -105,6 +113,19 @@ What we (the developer) receive after a successful order:
 We do not receive or store your payment card number, CVC, or expiration date. Stripe processes the charge on our behalf; their handling of your data is governed by [Stripe's Privacy Policy](https://stripe.com/privacy). Your shipping address and email are kept only as long as needed to fulfill your order, after which they're retained in Stripe's records for the standard period required by tax and accounting regulations.
 
 We don't use stamp-order data for marketing or share it with anyone else.
+
+## Hexpansion
+
+**Hexpansion** is a separate app, but it signs you in with the *same* account as the bill tracker (the same Sign in with Apple identity or email login) and uses the same Google Firebase backend. Everything above about how we store data, who we share it with (no advertisers, no analytics SDKs), and your right to delete your account applies to Hexpansion too. Hexpansion collects some additional data that the bill tracker does not:
+
+- **Account identity** — Hexpansion reuses your existing account: your sign-in email (or Sign in with Apple identifier), your random user ID, and your **username and display name** (shared from your Follow the Money profile). Your username and display name are shown to other players on the leaderboard and next to your chat messages.
+- **Your device location** — this is the big difference from the bill tracker. While you play, Hexpansion reads your phone's location (via GPS, at roughly city-block accuracy) to work out which map areas ("hexes") you're close enough to claim or attack. Your distance to a hex is also checked on our server so the rules can't be faked. We use your location only while the app is in use; Hexpansion does not track your location in the background. You can turn this off in iOS Settings → Privacy & Security → Location Services, but Hexpansion's core map features won't work without it. iOS asks your permission before Hexpansion uses your location for the first time.
+- **Game play data** — your coin balance, the hexes you own, your territory, buildings and units, your season stats, and any cosmetic items you've unlocked. Coin balances and territory are calculated and written on our server; your coin balance comes from the bills you've logged in the bill tracker. Other players can see which hexes you own and your stats on the leaderboard.
+- **In-game chat messages** — Hexpansion has a shared chat where players can talk and coordinate. The messages you send (their text, your username, and the time sent) are stored in Firebase and are visible to all other players in the chat. **Don't post anything private** (passwords, financial details, government ID numbers, your home address) in chat — it is public to other players, not a private message.
+
+**Keeping chat safe.** Because players can post messages and choose usernames that others see, Hexpansion gives you tools to deal with abuse: you can **report** a message or a player, and you can **block** a player so you no longer see their messages. Reports go to the developer for review, and we may remove content or restrict accounts that break the rules. We have zero tolerance for harassment, threats, hate, sexual content involving minors, or other objectionable content or abusive behavior. Your block list and the reports you submit are visible only to you (and to the developer, for moderation).
+
+**Deleting your account from Hexpansion.** You can delete your account from inside Hexpansion (Profile → Delete account). Because the two apps share one account, deleting from Hexpansion deletes the *same* account used by the bill tracker, and removes the data tied to it. If you signed in with Apple, we also revoke that sign-in token. This is permanent.
 
 ## Children
 
