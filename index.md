@@ -1,6 +1,6 @@
 # Cash Trail Tycoon — Privacy Policy
 
-**Last updated:** September 2026
+**Last updated:** October 2026
 
 ## Summary
 
@@ -47,6 +47,7 @@ When you use the social features:
 - Your real name, mailing address, phone number, or contacts
 - **In the bill tracker:** your GPS location is not read automatically — you choose what address to enter for each bill. (Hexpansion is different: it does use your device location while you play — see the Hexpansion section below.)
 - Any data from third-party advertising or analytics SDKs (we don't use any)
+- Your payment card details or billing address — subscriptions are paid through Apple, and we never see your payment information
 
 ## What stays on your device
 
@@ -69,7 +70,7 @@ User accounts and bill data are stored in **Google Firebase** (Firebase Authenti
 
 ## Sharing your data
 
-We do not share your data with third parties for advertising, analytics, or marketing. Your data is processed by Google Firebase as our backend infrastructure provider only.
+We do not share your data with third parties for advertising, analytics, or marketing. Your data is processed by Google Firebase as our backend infrastructure provider only. If you subscribe to the Supporter Club, Apple processes your payment (see "Supporter Club" below).
 
 ## Your choices
 
@@ -94,25 +95,24 @@ Direct messages are stored on Firebase and visible to:
 
 We don't read messages otherwise. We don't use messages for advertising or analytics. Don't share sensitive personal information (passwords, financial details, government ID numbers) over direct messages. The app warns recipients when an incoming message contains an email address or phone number, since those are common scam vectors.
 
-## Stamp orders
+## Supporter Club (subscriptions)
 
-The app offers an optional custom rubber stamp for purchase. When you tap "Order yours" the app opens **Stripe's hosted checkout page** in your browser. The Cash Trail Tycoon app itself never collects, sees, or stores your payment information.
+The **Supporter Club** is an optional monthly subscription, sold through Apple's In-App Purchase. Members get a custom map pin and a supporter badge.
 
-What Stripe collects from you at checkout:
-- Your name
-- Your email address
-- Your shipping address
-- Your payment card details (handled and stored only by Stripe per their PCI-compliant infrastructure)
-- The username you'd like engraved on the stamp (entered as a custom field on the checkout page)
+- **Payment is handled entirely by Apple.** We never see or store your card details, billing address, or Apple Account details. Apple's handling of your payment is governed by [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
+- **What Apple sends us.** A record of your subscription that Apple signs so it can't be faked: which level you chose, when it started, when it renews or ends, whether it was cancelled or refunded, and Apple's transaction identifiers. With each purchase the app also gives Apple an anonymous code derived from your account ID, so we can match the subscription to your account. We store this on our server (Google Firebase) to decide whether you're a member. The transaction identifiers are kept private and are never shown to other users.
+- **What other users can see.** That you're a member: your custom pin (its shape, colours and icon) on the map, and the same pin as a badge next to your username. Your membership level, the date you joined and the date your current membership period ends are also stored with your public member record, so other users could see them, although the app doesn't display them.
+- **Notifications to the developer.** We get an alert when someone joins, changes level, leaves or is refunded, showing their username and the change.
+- **Cancelling.** Manage or cancel any time in iOS Settings → your name → Subscriptions. When your membership ends your pin goes back to a standard pin; we keep your pin design in case you rejoin.
+- **Deleting your account** removes your membership record and pin design. It does **not** cancel the subscription with Apple — cancel that in Settings first.
 
-What we (the developer) receive after a successful order:
-- Your name, email, and shipping address — used solely to ship the stamp to you
-- The username you provided — used solely to personalize the engraving
-- The amount paid and the order ID
+## Empire, streaks and the leaderboard
 
-We do not receive or store your payment card number, CVC, or expiration date. Stripe processes the charge on our behalf; their handling of your data is governed by [Stripe's Privacy Policy](https://stripe.com/privacy). Your shipping address and email are kept only as long as needed to fulfill your order, after which they're retained in Stripe's records for the standard period required by tax and accounting regulations.
+The Empire tab is a game played with **play money only** — no real money goes in or out, and nothing in it can be cashed out. To run it we store, on our server: your play-money balance, your businesses, your goals and wagers, your prestige level, and a history of your balance for the chart. These are private to you, except your **net worth**, which appears on the public leaderboard next to your username. Your bill-logging streak (when it started, how far ahead you're covered, and your longest streak) is stored on your profile, which other users can read.
 
-We don't use stamp-order data for marketing or share it with anyone else.
+## Past stamp orders
+
+We no longer sell stamps. If you ordered one in the past, your order was taken on **Stripe's hosted checkout page** and the app never saw your payment information. Stripe keeps those order records (name, email, shipping address, amount and order ID) for the period required by tax and accounting rules; their handling is governed by [Stripe's Privacy Policy](https://stripe.com/privacy). We used order details only to make and ship the stamp, and never for marketing.
 
 ## Hexpansion
 
